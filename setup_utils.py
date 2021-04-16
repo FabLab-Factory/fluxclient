@@ -86,10 +86,9 @@ def get_install_requires():
     return ['setuptools', 'pycrypto', 'pyserial', 'pillow', 'numpy', 'scipy',
             'ecdsa', 'lxml', 'pyasn1==0.1.9']
 
-
 def get_packages():
     return [name
-            for _, name, ispkg in walk_packages(".")
+            for _, name, ispkg in walk_packages()
             if name.startswith("fluxclient") and ispkg]
 
 
